@@ -101,10 +101,12 @@ public class GamePanel extends JPanel implements ActionListener {
                 status.setText("STATUS: You lose!");
                 color(l, Color.red);
                 return true;
-            } else if (cpuPositions.size() + playerPositions.size() == 9) {
-                status.setText("STATUS: Tie!");
-                return true;
             }
+        }
+
+        if (cpuPositions.size() + playerPositions.size() == 9) {
+            status.setText("STATUS: Tie!");
+            return true;
         }
 
         return false;
